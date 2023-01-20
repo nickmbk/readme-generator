@@ -88,7 +88,7 @@ function writeToFile(fileName, data) {
 // function to initialize program
 function init() {
     inquirer
-    .createPromptModule(questions)
+    .prompt(questions)
     .then((answers) => {
         generateMarkdown(answers);
     });
