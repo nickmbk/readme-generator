@@ -21,7 +21,7 @@ function generateMarkdown(data) {
 
   - [Installation] (#installation)
   - [Usage] (#usage)
-  - Credits (#credits)
+  - [Credits] (#credits)
   - [License] (#license)
 
   ## Installation
