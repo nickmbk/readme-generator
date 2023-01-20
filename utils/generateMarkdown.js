@@ -34,7 +34,7 @@ function generateMarkdown(data) {
 
   ${data.usage}
 
-  ![${data.title} Screenshot] (${screenshot})
+  ![${data.title} Screenshot] (${data.screenshot})
   `
 }
 
