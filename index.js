@@ -5,13 +5,14 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
 const questions = [
-    // title
+// const titleDesciptionQuestions = [
+//     // title
     {
         type: 'input',
         name: 'title',
         message: 'What is the title of your project?',
     },
-    // description questions
+//     // description questions
     {
         type: 'input',
         name: 'descDo',
@@ -42,7 +43,9 @@ const questions = [
         name: 'descFeatures',
         message: 'Are there any features you would like to add in the future?',
     },
-    // installation questions
+// ];
+// const installationQuestions = [
+//     // installation questions
     {
         type: 'input',
         name: 'installation',
@@ -53,7 +56,9 @@ const questions = [
         name: 'instUrl',
         message: 'What is the URL to your app?',
     },
-    // usage questions
+// ];
+// const usageQuestions = [
+//     // usage questions
     {
         type: 'input',
         name: 'usage',
@@ -64,32 +69,110 @@ const questions = [
         name: 'screenshot',
         message: 'Enter the filepath to a screenshot of the app: ',
     },
+// ];
+// const contributorQuestion = [
+    // credits
     // {
-    //     type: '',
-    //     name: '',
-    //     message: '',
+    //     type: 'confirm',
+    //     default: 'yes',
+    //     name: 'contributors',
+    //     message: 'Were there any contributors to the project?',
     // },
-    // {
-    //     type: '',
-    //     name: '',
-    //     message: '',
-    // },
-    // {
-    //     type: '',
-    //     name: '',
-    //     message: '',
-    // },
+     {
+        type: 'input',
+        name: 'contributors',
+        message: 'Name any contributors and they\'re GitHub URL\'s: ',
+    },
+    {
+        type: 'input',
+        name: 'resources',
+        message: 'Name any resources used and the links for them: ',
+    },
+    {
+        type: 'choices',
+        name: 'license',
+        message: '',
+    },
+    {
+        type: '',
+        name: '',
+        message: '',
+    },
+    {
+        type: '',
+        name: '',
+        message: '',
+    },
+    {
+        type: '',
+        name: '',
+        message: '',
+    },
+    {
+        type: '',
+        name: '',
+        message: '',
+    },
+    {
+        type: '',
+        name: '',
+        message: '',
+    },
+    {
+        type: '',
+        name: '',
+        message: '',
+    },
+    {
+        type: '',
+        name: '',
+        message: '',
+    },
+    {
+        type: '',
+        name: '',
+        message: '',
+    },
+    {
+        type: '',
+        name: '',
+        message: '',
+    },
+
 ];
+// const contributor = [
+//     {
+//         type: 'input',
+//         name: 'contributor',
+//         message: 'What was the name of the contributor: ',
+//     },
+//     {
+//         type: 'input',
+//         name: 'contributorGithub',
+//         message: 'What is the contributor\'s GitHub URL: ',
+//     },
+// ]
+// ];
 
 // function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) =>
-    err ? console.log(err) : console.log('Success!'));
-}
+// function writeToFile(fileName, data) {
+//     fs.writeFile(fileName, data, (err) =>
+//     err ? console.log(err) : console.log('Success!'));
+// }
 
 // function to initialize program
 function init() {
     inquirer
+    // .prompt(contributorQuestion)
+    // .then((answer) => {
+    //     if (answer.contributors) {
+    //         inquirer
+    //         .prompt(contributor)
+    //         .then((answers2) => {
+    //             console.log(answer, answers2);
+    //         });
+    //     }
+    // });
     .prompt(questions)
     .then((answers) => {
         const readmeFile = generateMarkdown(answers);
