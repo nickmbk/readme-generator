@@ -30,7 +30,7 @@ function generateMarkdown(data) {
 
   ${data.installation}
 
-  [${data.title}] (${data.instUrl})
+  Repo: [${data.title}] (${data.instUrl})
 
   ## Usage
 

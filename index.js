@@ -130,6 +130,7 @@ const questions = [
         type: 'input',
         name: 'anyQuestions',
         message: 'What can the user do if they have any questions?',
+        default: 'Contact me for any questions you have.'
     },
 ];
 // const contributor = [
@@ -147,10 +148,10 @@ const questions = [
 // ];
 
 // function to write README file
-// function writeToFile(fileName, data) {
-//     fs.writeFile(fileName, data, (err) =>
-//     err ? console.log(err) : console.log('Success!'));
-// }
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+    err ? console.log(err) : console.log('Success!'));
+}
 
 // function to initialize program
 function init() {
