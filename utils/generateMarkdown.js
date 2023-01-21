@@ -45,6 +45,23 @@ function generateMarkdown(data) {
   ${data.resources}
 
   ## License
+  `
+  let licenseBadge = '';
+
+  switch(data.license) {
+    case 'GNU v3.0' :
+      licenseBadge = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
+      break;
+    case 'MIT':
+      licenseBadge='[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+      break;
+    case 'Apache 2.0':
+      licenseBadge = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+      break;
+  }
+
+  readmeTemplate += `
+  ${licenseBadge}
 
   ${data.license}
 
