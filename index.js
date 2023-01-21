@@ -6,6 +6,27 @@ const generateMarkdown = require("./utils/generateMarkdown");
 // array of questions for user
 const questions = [
 // const titleDesciptionQuestions = [
+    // users details
+    {
+        type: 'input',
+        name: 'usersName',
+        message: 'What is your full name?',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?',
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'What is your GitHub username?',
+    },
+    {
+        type: 'input',
+        name: 'twitter',
+        message: 'What is your Twitter username? (Do not add the @)',
+    },
 //     // title
     {
         type: 'input',
@@ -89,56 +110,27 @@ const questions = [
         message: 'Name any resources used and the links for them: ',
     },
     {
-        type: 'choices',
+        type: 'list',
         name: 'license',
-        message: '',
+        message: 'What license have you used?',
+        choices: ['GNU v3.0', 'MIT', 'Apache 2.0'],
+        default: [0],
     },
     {
-        type: '',
-        name: '',
-        message: '',
+        type: 'input',
+        name: 'howToContribute',
+        message: 'How can other users contribute to your project?',
     },
     {
-        type: '',
-        name: '',
-        message: '',
+        type: 'input',
+        name: 'tests',
+        message: 'What tests can users run?',
     },
     {
-        type: '',
-        name: '',
-        message: '',
+        type: 'input',
+        name: 'anyQuestions',
+        message: 'What can the user do if they have any questions?',
     },
-    {
-        type: '',
-        name: '',
-        message: '',
-    },
-    {
-        type: '',
-        name: '',
-        message: '',
-    },
-    {
-        type: '',
-        name: '',
-        message: '',
-    },
-    {
-        type: '',
-        name: '',
-        message: '',
-    },
-    {
-        type: '',
-        name: '',
-        message: '',
-    },
-    {
-        type: '',
-        name: '',
-        message: '',
-    },
-
 ];
 // const contributor = [
 //     {

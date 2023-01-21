@@ -35,7 +35,35 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ![${data.title} Screenshot] (${data.screenshot})
+
+  ## Contributors
+
+  ${data.contributors}
+
+  ${data.resources}
+
+  ## License
+
+  ${data.license}
+
+  ${data.howToContribute}
+
+  ## Tests
+
+  ${data.tests}
+
+  ## Questions
+
+  ${data.anyQuestions}
+
+  ${data.usersName}
+  ${data.email}
+  https://www.github.com/${data.github}
+  https://www.twitter.com/${data.twitter}
+
   `
+
+
   return readmeTemplate;
 }
 
