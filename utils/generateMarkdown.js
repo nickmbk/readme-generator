@@ -89,7 +89,7 @@ function generateMarkdown(data) {
 
   ${data.usersName}
 
-  [${data.email}]${data.email}
+  [${data.email}](${data.email})
 
   [GitHub: ${data.github}](https://www.github.com/${data.github})
 

@@ -56,6 +56,8 @@
 
   Once you have answered each question, press Enter on the keyboard to move to the next question.
 
+  When all questions are answered, you should see 'Success!' logged in the terminal and your README.md file will have be generated and saved in the directory above where you have run the app from.
+
   ![README Generator Screenshot](./assets/screenshots/readme-generator-screenshot.jpg)
 
   ## Credits
@@ -76,7 +78,7 @@
 
   Nick Misselbrook
 
-  [nick.mbk@hotmail.com]nick.mbk@hotmail.com
+  [nick.mbk@hotmail.com](nick.mbk@hotmail.com)
 
   [GitHub: nickmbk](https://www.github.com/nickmbk)
 
