@@ -1,3 +1,4 @@
+// import required modules 
 const fs = require("fs");
 const path = require('path');
 const inquirer = require("inquirer");
@@ -5,7 +6,6 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
 const questions = [
-// const titleDesciptionQuestions = [
     // users details
     {
         type: 'input',
@@ -22,18 +22,13 @@ const questions = [
         name: 'github',
         message: 'What is your GitHub username?',
     },
-    {
-        type: 'input',
-        name: 'twitter',
-        message: 'What is your Twitter username? (Do not add the @)',
-    },
-//     // title
+    // title
     {
         type: 'input',
         name: 'title',
         message: 'What is the title of your project?',
     },
-//     // description questions
+    // description questions
     {
         type: 'input',
         name: 'descDo',
@@ -64,9 +59,7 @@ const questions = [
         name: 'descFeatures',
         message: 'Are there any features you would like to add in the future?',
     },
-// ];
-// const installationQuestions = [
-//     // installation questions
+    // installation questions
     {
         type: 'input',
         name: 'installation',
@@ -77,9 +70,7 @@ const questions = [
         name: 'instUrl',
         message: 'What is the URL to your app?',
     },
-// ];
-// const usageQuestions = [
-//     // usage questions
+    // usage questions
     {
         type: 'input',
         name: 'usage',
@@ -90,16 +81,8 @@ const questions = [
         name: 'screenshot',
         message: 'Enter the filepath to a screenshot of the app: ',
     },
-// ];
-// const contributorQuestion = [
-    // credits
-    // {
-    //     type: 'confirm',
-    //     default: 'yes',
-    //     name: 'contributors',
-    //     message: 'Were there any contributors to the project?',
-    // },
-     {
+    // credits questions
+    {
         type: 'input',
         name: 'contributors',
         message: 'Name any contributors and they\'re GitHub URL\'s: ',
@@ -109,6 +92,7 @@ const questions = [
         name: 'resources',
         message: 'Name any resources used and the links for them: ',
     },
+    // license questions
     {
         type: 'list',
         name: 'license',
@@ -121,57 +105,35 @@ const questions = [
         name: 'howToContribute',
         message: 'How can other users contribute to your project?',
     },
+    // test questions
     {
         type: 'input',
         name: 'tests',
         message: 'What tests can users run?',
     },
-    {
-        type: 'input',
-        name: 'anyQuestions',
-        message: 'What can the user do if they have any questions?',
-        default: 'Contact me for any questions you have.'
-    },
 ];
-// const contributor = [
-//     {
-//         type: 'input',
-//         name: 'contributor',
-//         message: 'What was the name of the contributor: ',
-//     },
-//     {
-//         type: 'input',
-//         name: 'contributorGithub',
-//         message: 'What is the contributor\'s GitHub URL: ',
-//     },
-// ]
-// ];
 
 // function to write README file
 function writeToFile(fileName, data) {
+    // fs uses the writeToFile method and accepts the fileName argument that will contain what filename to save the file under, and the data argument which will contain what to write inside the file.
     fs.writeFile(fileName, data, (err) =>
+    // if there is an error when writing the file, console.log the error to the user, otherwise console.log Success! to the user so they know the file has been created.
     err ? console.log(err) : console.log('Success!'));
 }
 
 // function to initialize program
 function init() {
+    // run inquirer to prompt the user for the questions
     inquirer
-    // .prompt(contributorQuestion)
-    // .then((answer) => {
-    //     if (answer.contributors) {
-    //         inquirer
-    //         .prompt(contributor)
-    //         .then((answers2) => {
-    //             console.log(answer, answers2);
-    //         });
-    //     }
-    // });
-    .prompt(questions)
-    .then((answers) => {
-        const readmeFile = generateMarkdown(answers);
-        writeToFile("README.md", readmeFile);
-    });
+        .prompt(questions)
+        // and when they have answered...
+        .then((answers) => {
+            // call the generateMarkdown function passing the answers from the user as the data to create the README template, store what is returned in the const readmeFile
+            const readmeFile = generateMarkdown(answers);
+            // call the writeToFile function passing README.md as the filename and readmeFile const as the data to put in the file
+            writeToFile('../README.md', readmeFile);
+        });
 }
 
-// function call to initialize program
+// function call to initialize program on startup
 init();
