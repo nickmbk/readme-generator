@@ -41,13 +41,13 @@ function generateMarkdown(data) {
 
   ## Credits
 
-  - ### Contributors
+  ### Contributors
 
-    ${data.contributors}
+  ${data.contributors}
 
-  - ### Resources
+  ### Resources
   
-    ${data.resources}
+  ${data.resources}
 
   ## License
   `
@@ -75,9 +75,9 @@ function generateMarkdown(data) {
 
   This project uses the ${data.license} License.
 
-  - ### Contributing
+  ### Contributing
 
-    ${data.howToContribute}
+  ${data.howToContribute}
 
   ## Tests
 

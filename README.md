@@ -60,9 +60,9 @@
 
   ## Credits
 
-  - ### Resources
+  ### Resources
   
-    Inquirer Documentation https://github.com/SBoudrias/Inquirer.js
+  Inquirer Documentation https://github.com/SBoudrias/Inquirer.js
 
   ## License
   
