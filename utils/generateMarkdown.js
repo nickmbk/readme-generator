@@ -39,11 +39,15 @@ function generateMarkdown(data) {
 
   ![${data.title} Screenshot](${data.screenshot})
 
-  ## Contributors
+  ## Credits
 
-  ${data.contributors}
+  - ### Contributors
 
-  ${data.resources}
+    ${data.contributors}
+
+  - ### Resources
+  
+    ${data.resources}
 
   ## License
   `
@@ -71,7 +75,9 @@ function generateMarkdown(data) {
 
   This project uses the ${data.license} License.
 
-  ${data.howToContribute}
+  - ### Contributing
+
+  -- ${data.howToContribute}
 
   ## Tests
 
@@ -81,9 +87,12 @@ function generateMarkdown(data) {
 
   Please contact me if you have any questions:
 
-  ${data.usersName}\n
-  ${data.email}\n
-  https://www.github.com/${data.github}\n
+  ${data.usersName}
+
+  [${data.email}]${data.email}
+
+  [GitHub: ${data.github}](https://www.github.com/${data.github})
+
 
   `
 
