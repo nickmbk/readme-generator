@@ -77,7 +77,7 @@ function generateMarkdown(data) {
 
   - ### Contributing
 
-  -- ${data.howToContribute}
+    ${data.howToContribute}
 
   ## Tests
 
