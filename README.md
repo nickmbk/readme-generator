@@ -15,6 +15,12 @@
 
   As mentioned earlier, I would like to make the generator a bit more advanced, changing things within the file dependent on the users input, such as taking sections out if they don't need them.
 
+  ### Links
+
+  Repo: [README Generator](https://www.github.com/nickmbk/readme-generator)
+
+  [Walkthrough Video](https://drive.google.com/file/d/1qeiuF8s4uM6M8QvdQIhFDMOL0zCUzdyr/view?usp=sharing) 
+
   ## Table of Contents
 
   - [Installation](#installation)
@@ -57,6 +63,8 @@
   Once you have answered each question, press Enter on the keyboard to move to the next question.
 
   When all questions are answered, you should see 'Success!' logged in the terminal and your README.md file will have be generated and saved in the directory above where you have run the app from.
+
+  [Walkthrough Video](https://drive.google.com/file/d/1qeiuF8s4uM6M8QvdQIhFDMOL0zCUzdyr/view?usp=sharing) 
 
   ![README Generator Screenshot](./assets/screenshots/readme-generator-screenshot.jpg)
 
